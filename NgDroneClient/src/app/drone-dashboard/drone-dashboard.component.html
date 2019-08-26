@@ -1,0 +1,28 @@
+<div style="text-align:center">
+    <h1>
+      {{ title }}
+    </h1>
+    <img width="300" alt="Drone Logo" src="./assets/Drone-PNG-Transparent-Image.png">
+  <h2>Drones</h2>
+  <table>
+    <tr>
+        <th>Id</th>
+        <th>Speed (kmph)</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Distance (m last 10s)</th>
+        <th>Last Updated (s ago)</th>
+    </tr>
+    <tr *ngFor="let drone of drones">
+        <td>{{drone.id}}</td>
+        <td>{{drone.speed}}</td>
+        <td>{{drone.lat}}</td>
+        <td>{{drone.long}}</td>
+        <td [ngClass]="{'highlight': drone.distance != null && drone.distance !== '' && drone.distance >= 0 && drone.distance <= 1}">{{drone.distance}}</td>
+        <td>{{drone.lastUpdated}}</td>
+    </tr>
+  </table>
+  </div>
+  
+  <router-outlet></router-outlet>
+  

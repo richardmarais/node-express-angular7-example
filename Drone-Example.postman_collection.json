@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "39a5b318-e339-42da-a3ce-daa8ccf1c315",
+		"name": "Drone-Example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Drone Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[0,1332]"
+				},
+				"url": {
+					"raw": "http://localhost:3000/drone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"drone"
+					]
+				},
+				"description": "Post drone data"
+			},
+			"response": []
+		}
+	]
+}
